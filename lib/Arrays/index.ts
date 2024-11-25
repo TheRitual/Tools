@@ -1,9 +1,11 @@
-import rangeArray from "./rangeArray/index.ts";
-
 /**
  * This module contains list of all Arrays Tools and Utils
  */
+import rangeArray from "./rangeArray/index.ts";
+
+/** Object with all Array Tools and Utils */
 const ArraysTools = {
+  /* {@link rangeArray} Create range  numeric array functions */
   rangeArray,
 } as const;
 
