@@ -17,7 +17,10 @@ export interface RangeArrayArgs {
 
 /**
  * @function rangeArray
- * returns array filled with numbers within
+ * @param end Sets last included element within range
+ * @param start Sets first element included within range
+ * @param step Sets step between number
+ * @returns array filled with numbers within
  * pecific range and step
  */
 const rangeArray = ({
