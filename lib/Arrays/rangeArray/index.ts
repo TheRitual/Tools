@@ -15,7 +15,7 @@ export interface RangeArrayArgs {
   step?: number;
 }
 
-/**
+/** creating array with  numbers in specific range and step
  * @function RangeArray {@link rangeArray}
  * @param end Sets last included element within range
  * @param start Sets first element included within range
@@ -34,10 +34,7 @@ const rangeArray = ({
    * it will be transformed to positive number
    */
   step = 1,
-}
-  /** {@link RangeArrayArgs} interface */
-  : RangeArrayArgs
-): number[] => {
+}: RangeArrayArgs): number[] => {
   const length = Math.abs(Math.ceil((end - start) / step)) + 1;
   const realStep = end > start ? Math.abs(step) : -Math.abs(step);
   const result = new Array(length)
