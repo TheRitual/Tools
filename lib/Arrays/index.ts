@@ -10,6 +10,7 @@ const ArraysTools = {
 } as const;
 
 export {
+  /* {@link rangeArray} Create range  numeric array functions */
   rangeArray,
 }
 
