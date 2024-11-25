@@ -1,4 +1,4 @@
-/** rangeArray function 
+/** rangeArray function
  * @module
  */
 
@@ -46,5 +46,12 @@ const rangeArray = ({
     .map((_, i) => start + i * realStep);
   return result;
 };
+
+/** Creates array with number sup to set number @param end Last included intt number */
+export const arrayUpTo = (end: number) => rangeArray({ end });
+
+/** creates array with numbers within set range and with optional step size between them */
+export const numArray = (start: number, end: number, step?: number) =>
+  rangeArray({ start, end, step: step ?? 1 });
 
 export default rangeArray;
