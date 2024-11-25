@@ -17,6 +17,8 @@ export interface RangeArrayArgs {
    * it will be transformed to positive number
    */
   step?: number;
+  /** rounding after coma precision **/
+  precision?: number;
 }
 
 /** creating array with  numbers in specific range and step
@@ -38,12 +40,20 @@ const rangeArray = ({
    * it will be transformed to positive number
    */
   step = 1,
+precision= 2,
 }: RangeArrayArgs): number[] => {
-  const length = Math.abs(Math.floor((end - start) / step)) + 1;
-  const realStep = end > start ? Math.abs(step) : -Math.abs(step);
+  const prec = Math.round(precision);
+  const roundFn = end > start ? Math.floor : Math.ceil;
+  const length = Math.abs(roundFn((end - start) / step)) + 1;
+  const absStep = Math.abs(step);
+  const realStep = end > start ? absStep : -absStep;
   const result = new Array(length)
     .fill(null)
-    .map((_, i) => start + i * realStep);
+    .map((_, i) => {
+      const stepVal = Number((i * realStep).toFixed(prec));
+      console.log({ i, stepVal, realStep });
+      return Number((start + stepVal).toFixed(2));
+    });
   return result;
 };
 
