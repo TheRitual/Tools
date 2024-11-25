@@ -10,4 +10,8 @@ const RitualTools = {
   Arrays: ArraysTools,
 } as const;
 
+export {
+  ArraysTools,
+}
+
 export default RitualTools;

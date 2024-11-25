@@ -9,4 +9,8 @@ const ArraysTools = {
   rangeArray,
 } as const;
 
+export {
+  rangeArray,
+}
+
 export default ArraysTools;

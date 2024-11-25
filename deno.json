@@ -8,5 +8,8 @@
   "name": "@ritual/tools",
   "version": "0.2.2",
   "license": "MIT",
-  "exports": "./mod.ts"
+  "exports": {
+    ".": " ./mod.ts",
+    "./arrays": "./lib/Arrays/index.ts"
+  }
 }
