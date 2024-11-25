@@ -1,4 +1,8 @@
-/**
+/** rangeArray function 
+ * @module
+ */
+
+/** rangeArray function arguments
  * @interface RangeArrayArgs
  * Arguments for rangeArray function
  */
