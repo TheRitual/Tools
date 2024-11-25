@@ -28,19 +28,17 @@ Deno.test(function RangeArrayValuesOffset() {
   assertEquals(resultOffset[4], 5);
 });
 
-const resultStep = rangeArray({ end: 4.5, start: 2, step: 0.5 });
+const resultStep = rangeArray({ end: 7, start: 5, step: 0.6 });
 
 Deno.test(function RangeArrayLengthStep() {
-  assertEquals(resultStep.length, 6);
+  assertEquals(resultStep.length, 4);
 });
 
 Deno.test(function RangeArrayValuesStep() {
-  assertEquals(resultStep[0], 2);
-  assertEquals(resultStep[1], 2.5);
-  assertEquals(resultStep[2], 3);
-  assertEquals(resultStep[3], 3.5);
-  assertEquals(resultStep[4], 4);
-  assertEquals(resultStep[5], 4.5);
+  assertEquals(resultStep[0], 5);
+  assertEquals(resultStep[1], 5.6);
+  assertEquals(resultStep[2], 6.2);
+  assertEquals(resultStep[3], 6.8);
 });
 
 const resultNeg = rangeArray({ end: -3 });

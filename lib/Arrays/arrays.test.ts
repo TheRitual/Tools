@@ -5,9 +5,11 @@ const keys = Object.keys(ArraysTools).sort();
 
 Deno.test(function ArraysObjectLength() {
   const RTLength = keys.length;
-  assertEquals(RTLength, 1);
+  assertEquals(RTLength, 3);
 });
 
 Deno.test(function ArraysObjectKeys() {
-  assertEquals(keys[0], "rangeArray");
+  assertEquals(keys.includes("rangeArray"), true);
+  assertEquals(keys.includes("arrayUpTo"), true);
+  assertEquals(keys.includes("numArray"), true);
 });

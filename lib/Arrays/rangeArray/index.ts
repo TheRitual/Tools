@@ -39,7 +39,7 @@ const rangeArray = ({
    */
   step = 1,
 }: RangeArrayArgs): number[] => {
-  const length = Math.abs(Math.ceil((end - start) / step)) + 1;
+  const length = Math.abs(Math.floor((end - start) / step)) + 1;
   const realStep = end > start ? Math.abs(step) : -Math.abs(step);
   const result = new Array(length)
     .fill(null)
